@@ -14,6 +14,9 @@ a{
 ul, ol {
     list-style: none;
 }
+
+
+
 /****** BODY ******/
 .button_init{
     height: 60px;
@@ -38,6 +41,9 @@ ul, ol {
     color: white;
     transition: 1s;
 }
+
+
+
 /****** HEADER ******/
 .navigation{
     display: flex;
@@ -52,6 +58,9 @@ ul, ol {
     position: absolute;
     justify-content: flex-end;
 }
+
+
+
 /****** MAIN ******/
 .apresentation{
     display: flex;
@@ -65,17 +74,18 @@ ul, ol {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container_text{
+/* .container_text{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 .text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 500px;
+    margin-right: 11%;
 }
 .sob_title{
     font-size: 18px;
@@ -99,33 +109,115 @@ ul, ol {
     font-family: 'Roboto', sans-serif;
     color: #4C5A5D;
 }
+
+
+
+/****** MAIN-SECTION-PROMOCOES ******/
 .promotion{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    overflow-x: hidden;
     margin-top: 64px;
 }
-                                                                        .promocoes{                             
-                                                                            height: 290px;
-                                                                            width: 100%;
-                                                                            margin-top: 38px;
-                                                                            margin-bottom: 38px;
-                                                                            background-color: #EBE7DB;
+.promocoes{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    height: fit-content;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    gap: 48px;
+}
+                                                                        .card_promo{
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            flex-direction: column;
+                                                                            background-color: #E7A200;
+                                                                            height: 420px;
+                                                                            width: 410px;
+                                                                            border-radius: 20px;
+                                                                            padding: 25px;
                                                                         }
+                                                                        .card_promo:hover .number_card{
+                                                                            color: #d03012;
+                                                                            transition: 0.5s;
+                                                                        }
+                                                                        .card_promo img{
+                                                                            height: 220px;
+                                                                            border-radius: 12px;
+                                                                        }
+                                                                        .txt_card{
+                                                                            color: white;
+                                                                            font-family: 'Roboto', sans-serif;
+                                                                            gap: 5px;
+                                                                            font-size: 20px;
+                                                                            margin-top: 5px;
+                                                                        }
+                                                                        .number_card{
+                                                                            display: flex;
+                                                                            justify-content: flex-end;
+                                                                            color: white;
+                                                                            font-family: 'Roboto', sans-serif;
+                                                                            font-size: 38px;
+                                                                            font-weight: 800;
+                                                                        }
+                                                                        
+
+
+/****** MAIN-SECTION-FAVORITOS ******/
 .favorities{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    overflow-x: hidden;
 }
-                                                                        .favoritos{
-                                                                            height: 290px;
-                                                                            width: 100%;
-                                                                            margin-top: 38px;
-                                                                            margin-bottom: 38px;
-                                                                            background-color: #EBE7DB;
-                                                                        }                                        
+.favoritos{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    height: fit-content;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    gap: 48px;
+}
+                                                                        .card_favoritos{
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            flex-direction: column;
+                                                                            background-color: #E7A200;
+                                                                            height: 420px;
+                                                                            width: 410px;
+                                                                            border-radius: 20px;
+                                                                            padding: 25px;
+                                                                        }
+                                                                        .card_favoritos:hover .number_card{
+                                                                            color: #d03012;
+                                                                            transition: 0.5s;
+                                                                        }
+                                                                        .card_favoritos img{
+                                                                            height: 220px;
+                                                                            border-radius: 12px;
+                                                                        }
+                                                                        .txt_card{
+                                                                            color: white;
+                                                                            font-family: 'Roboto', sans-serif;
+                                                                            gap: 5px;
+                                                                            font-size: 20px;
+                                                                        }
+                                                                        .number_card{
+                                                                            display: flex;
+                                                                            justify-content: flex-end;
+                                                                            color: white;
+                                                                            font-family: 'Roboto', sans-serif;
+                                                                            font-size: 38px;
+                                                                            font-weight: 800;
+                                                                        }
+
+
+/****** MAIN-SECTION-MENU(CARDAPIO) ******/                                        
 .menu{
     display: flex;
     align-items: center;
@@ -148,6 +240,10 @@ ul, ol {
                                                                             margin-bottom: 38px;
                                                                             background-color: #EBE7DB;
                                                                         }
+
+
+
+/****** MAIN-SECTION-SERVICOS ******/
 .services{
     display: flex;
     align-items: center;
@@ -182,7 +278,6 @@ ul, ol {
     font-size: 28px;
     font-weight: 700;
     color: #4C5A5D;
-    /* color: #d03012; */
 }
 .num{
     font-size: 28px;
@@ -190,6 +285,10 @@ ul, ol {
     color: #4C5A5D;
     /* color: #d03012; */
 }
+
+
+
+/****** MAIN-SECTION-CONTATO ******/
 .contact_user{
     display: flex;
     align-items: center;
@@ -276,6 +375,9 @@ ul, ol {
     border: solid #d03012;
     transition: 1s;
 }
+
+
+
 /****** FOOTER ******/
 footer{
     display: flex;

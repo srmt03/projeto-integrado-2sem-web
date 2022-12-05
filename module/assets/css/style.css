@@ -74,12 +74,6 @@ ul, ol {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .container_text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
 .text{
     display: flex;
     flex-direction: column;
@@ -217,6 +211,7 @@ ul, ol {
                                                                         }
 
 
+
 /****** MAIN-SECTION-MENU(CARDAPIO) ******/                                        
 .menu{
     display: flex;
@@ -224,22 +219,162 @@ ul, ol {
     justify-content: center;
     flex-direction: column;
 }
-                                                                        .pizzas{
-                                                                            display: flex;
-                                                                            flex-wrap: wrap;
-                                                                            margin-top: 38px;
-                                                                            height: 290px;
-                                                                            width: 100%;
-                                                                            background-color: #EBE7DB;
-                                                                        }
-                                                                        .bebidas{
-                                                                            display: flex;
-                                                                            flex-wrap: wrap;
-                                                                            height: 290px;
-                                                                            width: 100%;
-                                                                            margin-bottom: 38px;
-                                                                            background-color: #EBE7DB;
-                                                                        }
+.container_pizzas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    width: 100%;
+    background-color: #EBE7DB;
+    font-family: 'Roboto', sans-serif;
+    color: #d03012;
+    font-size: 32px;
+}
+.container_pizzas img {
+    height: 400px;
+    width: 500px;
+
+}
+.salgadas{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.column1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.column2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+                                                                                                        .pizza{
+                                                                                                            display: flex;
+                                                                                                            align-items: center;
+                                                                                                            justify-content: space-around;
+                                                                                                            height: 180px;
+                                                                                                            width: 700px;
+                                                                                                            font-family: 'Roboto', sans-serif;
+                                                                                                        }
+                                                                                                        .pizza i{
+                                                                                                            font-size: 28px;
+                                                                                                        }
+                                                                                                        .info{
+                                                                                                            display: flex;
+                                                                                                            flex-direction: column;
+                                                                                                            align-items: center;
+                                                                                                            justify-content: center;
+                                                                                                            gap: 6px;
+                                                                                                            color: #d03012;
+                                                                                                        }
+                                                                                                        .info h1{
+                                                                                                            font-size: 32px;
+                                                                                                            font-weight: 800;
+                                                                                                        }
+                                                                                                        .info span{
+                                                                                                            font-size: 22px;
+                                                                                                            font-weight: 400;
+                                                                                                        }
+.outras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 38px;
+    height: 100%;
+    width: 100%;
+}
+.organicas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-top: 38px;
+}
+.organicas img{
+    height: 300px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+.doces{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-top: 38px;
+    gap: 10px;
+    background-color: #EBE7DB;
+}
+.doces img{
+    height: 300px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+.bebidas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    background-color: #EBE7DB;
+    font-family: 'Roboto', sans-serif;
+    color: #d03012;
+    font-size: 32px;
+}
+.bebidas img{
+    height: 300px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+.container_bebidas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    width: 100%;
+}
+                                                                                                        .bebida{
+                                                                                                            display: flex;
+                                                                                                            align-items: center;
+                                                                                                            justify-content: space-around;
+                                                                                                            height: 180px;
+                                                                                                            width: 700px;
+                                                                                                            font-family: 'Roboto', sans-serif;
+                                                                                                        }
+                                                                                                        .bebida i{
+                                                                                                            font-size: 28px;
+                                                                                                        }
+                                                                                                        .info{
+                                                                                                            display: flex;
+                                                                                                            flex-direction: column;
+                                                                                                            align-items: center;
+                                                                                                            justify-content: center;
+                                                                                                            gap: 6px;
+                                                                                                            color: #d03012;
+                                                                                                        }
+                                                                                                        .info h1{
+                                                                                                            font-size: 32px;
+                                                                                                            font-weight: 800;
+                                                                                                        }
+                                                                                                        .info span{
+                                                                                                            font-size: 22px;
+                                                                                                            font-weight: 400;
+                                                                                                        }
 
 
 
@@ -283,7 +418,6 @@ ul, ol {
     font-size: 28px;
     font-weight: 300;
     color: #4C5A5D;
-    /* color: #d03012; */
 }
 
 

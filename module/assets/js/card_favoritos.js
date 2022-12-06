@@ -94,4 +94,4 @@ class card extends HTMLElement{
         return card;
     }
 }
-customElements.define('card_promo', card)
+customElements.define('card_favoritos', card)

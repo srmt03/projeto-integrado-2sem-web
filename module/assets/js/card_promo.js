@@ -64,7 +64,6 @@ class card extends HTMLElement{
                 gap: 5px;
                 font-size: 20px;
                 margin-top: 5px;
-                /* background-color: #4C5A5D; */
             }
             .number_card{
                 display: flex;
@@ -73,7 +72,6 @@ class card extends HTMLElement{
                 font-family: 'Roboto', sans-serif;
                 font-size: 38px;
                 font-weight: 800;
-                /* background-color: #d03012; */
             }
         `
         return style;

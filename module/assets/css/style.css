@@ -1,24 +1,28 @@
 /****** RESET ******/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
-ul, ol {
+
+ul,
+ol {
     list-style: none;
 }
 
 
 
 /****** BODY ******/
-.button_init{
+.button_init {
     height: 60px;
     width: 60px;
     font-size: 30px;
@@ -33,11 +37,13 @@ ul, ol {
     position: fixed;
     border: 1px solid #ebe7db5a;
 }
-.button_init:hover{
+
+.button_init:hover {
     background-color: #d03012;
     transition: 1s;
 }
-.button_init:hover i{
+
+.button_init:hover i {
     color: white;
     transition: 1s;
 }
@@ -45,7 +51,7 @@ ul, ol {
 
 
 /****** HEADER ******/
-.navigation{
+.navigation {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -62,7 +68,7 @@ ul, ol {
 
 
 /****** MAIN ******/
-.apresentation{
+.apresentation {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -74,31 +80,36 @@ ul, ol {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.text{
+
+.text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 500px;
     margin-right: 11%;
 }
-.sob_title{
+
+.sob_title {
     font-size: 18px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
-.title_main{
+
+.title_main {
     font-size: 62px;
     font-family: 'Roboto', sans-serif;
     color: #E7A200;
     margin-bottom: 20px;
 }
-.sub_title{
+
+.sub_title {
     font-size: 16px;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
-.title{
+
+.title {
     font-size: 62px;
     font-family: 'Roboto', sans-serif;
     color: #4C5A5D;
@@ -107,7 +118,7 @@ ul, ol {
 
 
 /****** MAIN-SECTION-PROMOCOES ******/
-.promotion{
+.promotion {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +126,8 @@ ul, ol {
     overflow-x: hidden;
     margin-top: 64px;
 }
-.promocoes{
+
+.promocoes {
     display: flex;
     width: 100%;
     overflow-x: scroll;
@@ -124,51 +136,57 @@ ul, ol {
     margin-bottom: 38px;
     gap: 48px;
 }
-                                                                        .card_promo{
-                                                                            display: flex;
-                                                                            justify-content: space-between;
-                                                                            flex-direction: column;
-                                                                            background-color: #E7A200;
-                                                                            height: 420px;
-                                                                            width: 410px;
-                                                                            border-radius: 20px;
-                                                                            padding: 25px;
-                                                                        }
-                                                                        .card_promo:hover .number_card{
-                                                                            color: #d03012;
-                                                                            transition: 0.5s;
-                                                                        }
-                                                                        .card_promo img{
-                                                                            height: 220px;
-                                                                            border-radius: 12px;
-                                                                        }
-                                                                        .txt_card{
-                                                                            color: white;
-                                                                            font-family: 'Roboto', sans-serif;
-                                                                            gap: 5px;
-                                                                            font-size: 20px;
-                                                                            margin-top: 5px;
-                                                                        }
-                                                                        .number_card{
-                                                                            display: flex;
-                                                                            justify-content: flex-end;
-                                                                            color: white;
-                                                                            font-family: 'Roboto', sans-serif;
-                                                                            font-size: 38px;
-                                                                            font-weight: 800;
-                                                                        }
-                                                                        
+
+.card_promo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #E7A200;
+    height: 420px;
+    width: 410px;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.card_promo:hover .number_card {
+    color: #d03012;
+    transition: 0.5s;
+}
+
+.card_promo img {
+    height: 220px;
+    border-radius: 12px;
+}
+
+.txt_card {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    gap: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.number_card {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+}
+
 
 
 /****** MAIN-SECTION-FAVORITOS ******/
-.favorities{
+.favorities {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
 }
-.favoritos{
+
+.favoritos {
     display: flex;
     width: 100%;
     overflow-x: scroll;
@@ -177,49 +195,55 @@ ul, ol {
     margin-bottom: 38px;
     gap: 48px;
 }
-                                                                        .card_favoritos{
-                                                                            display: flex;
-                                                                            justify-content: space-between;
-                                                                            flex-direction: column;
-                                                                            background-color: #E7A200;
-                                                                            height: 420px;
-                                                                            width: 410px;
-                                                                            border-radius: 20px;
-                                                                            padding: 25px;
-                                                                        }
-                                                                        .card_favoritos:hover .number_card{
-                                                                            color: #d03012;
-                                                                            transition: 0.5s;
-                                                                        }
-                                                                        .card_favoritos img{
-                                                                            height: 220px;
-                                                                            border-radius: 12px;
-                                                                        }
-                                                                        .txt_card{
-                                                                            color: white;
-                                                                            font-family: 'Roboto', sans-serif;
-                                                                            gap: 5px;
-                                                                            font-size: 20px;
-                                                                        }
-                                                                        .number_card{
-                                                                            display: flex;
-                                                                            justify-content: flex-end;
-                                                                            color: white;
-                                                                            font-family: 'Roboto', sans-serif;
-                                                                            font-size: 38px;
-                                                                            font-weight: 800;
-                                                                        }
+
+.card_favoritos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #E7A200;
+    height: 420px;
+    width: 410px;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.card_favoritos:hover .number_card {
+    color: #d03012;
+    transition: 0.5s;
+}
+
+.card_favoritos img {
+    height: 220px;
+    border-radius: 12px;
+}
+
+.txt_card {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.number_card {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+}
 
 
 
-/****** MAIN-SECTION-MENU(CARDAPIO) ******/                                        
-.menu{
+/****** MAIN-SECTION-MENU(CARDAPIO) ******/
+.menu {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.container_pizzas{
+
+.container_pizzas {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,59 +257,72 @@ ul, ol {
     color: #d03012;
     font-size: 32px;
 }
+
 .container_pizzas img {
     height: 400px;
     width: 500px;
 
 }
-.salgadas{
+
+.salgadas {
     display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
 }
-.column1{
+
+.column1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 50%;
 }
-.column2{
+
+.column2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 50%;
 }
-                                                                                                        .pizza{
-                                                                                                            display: flex;
-                                                                                                            align-items: center;
-                                                                                                            justify-content: space-around;
-                                                                                                            height: 180px;
-                                                                                                            width: 700px;
-                                                                                                            font-family: 'Roboto', sans-serif;
-                                                                                                        }
-                                                                                                        .pizza i{
-                                                                                                            font-size: 28px;
-                                                                                                        }
-                                                                                                        .info{
-                                                                                                            display: flex;
-                                                                                                            flex-direction: column;
-                                                                                                            align-items: center;
-                                                                                                            justify-content: center;
-                                                                                                            gap: 6px;
-                                                                                                            color: #d03012;
-                                                                                                        }
-                                                                                                        .info h1{
-                                                                                                            font-size: 32px;
-                                                                                                            font-weight: 800;
-                                                                                                        }
-                                                                                                        .info span{
-                                                                                                            font-size: 22px;
-                                                                                                            font-weight: 400;
-                                                                                                        }
-.outras{
+
+
+/****** CARD-PIZZA ******/
+.card_produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 180px;
+    width: 700px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_produtos i {
+    font-size: 28px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #d03012;
+}
+
+.info h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.info span {
+    font-size: 22px;
+    font-weight: 400;
+}
+/************/
+
+.outras {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,7 +330,8 @@ ul, ol {
     height: 100%;
     width: 100%;
 }
-.organicas{
+
+.organicas {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -301,12 +339,14 @@ ul, ol {
     width: 50%;
     padding-top: 38px;
 }
-.organicas img{
+
+.organicas img {
     height: 300px;
     width: 500px;
     margin-bottom: 50px;
 }
-.doces{
+
+.doces {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -316,12 +356,14 @@ ul, ol {
     gap: 10px;
     background-color: #EBE7DB;
 }
-.doces img{
+
+.doces img {
     height: 300px;
     width: 500px;
     margin-bottom: 50px;
 }
-.bebidas{
+
+.bebidas {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,12 +376,14 @@ ul, ol {
     color: #d03012;
     font-size: 32px;
 }
-.bebidas img{
+
+.bebidas img {
     height: 300px;
     width: 500px;
     margin-bottom: 50px;
 }
-.container_bebidas{
+
+.container_bebidas {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -348,44 +392,52 @@ ul, ol {
     padding-bottom: 38px;
     width: 100%;
 }
-                                                                                                        .bebida{
-                                                                                                            display: flex;
-                                                                                                            align-items: center;
-                                                                                                            justify-content: space-around;
-                                                                                                            height: 180px;
-                                                                                                            width: 700px;
-                                                                                                            font-family: 'Roboto', sans-serif;
-                                                                                                        }
-                                                                                                        .bebida i{
-                                                                                                            font-size: 28px;
-                                                                                                        }
-                                                                                                        .info{
-                                                                                                            display: flex;
-                                                                                                            flex-direction: column;
-                                                                                                            align-items: center;
-                                                                                                            justify-content: center;
-                                                                                                            gap: 6px;
-                                                                                                            color: #d03012;
-                                                                                                        }
-                                                                                                        .info h1{
-                                                                                                            font-size: 32px;
-                                                                                                            font-weight: 800;
-                                                                                                        }
-                                                                                                        .info span{
-                                                                                                            font-size: 22px;
-                                                                                                            font-weight: 400;
-                                                                                                        }
 
+
+/****** CARD-BEBIDAS ******/
+.card_produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 180px;
+    width: 700px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_produtos i {
+    font-size: 28px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #d03012;
+}
+
+.info h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.info span {
+    font-size: 22px;
+    font-weight: 400;
+}
+/************/
 
 
 /****** MAIN-SECTION-SERVICOS ******/
-.services{
+.services {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.container_services{
+
+.container_services {
     display: flex;
     background-color: #EBE7DB;
     height: 290px;
@@ -395,26 +447,31 @@ ul, ol {
     align-items: center;
     justify-content: center;
 }
-.container_info{
+
+.container_info {
     display: flex;
     gap: 40px;
     align-items: center;
 }
-.img_info img{
+
+.img_info img {
     width: 100px;
     height: 100px;
 }
-.txt_info{
+
+.txt_info {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
 }
-.txt_info span{
+
+.txt_info span {
     font-size: 28px;
     font-weight: 700;
     color: #4C5A5D;
 }
-.num{
+
+.num {
     font-size: 28px;
     font-weight: 300;
     color: #4C5A5D;
@@ -423,7 +480,7 @@ ul, ol {
 
 
 /****** MAIN-SECTION-CONTATO ******/
-.contact_user{
+.contact_user {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -431,7 +488,8 @@ ul, ol {
     position: relative;
     min-height: 52vh;
 }
-.form_contact{
+
+.form_contact {
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -444,13 +502,15 @@ ul, ol {
     padding: 30px;
     gap: 8px;
 }
-.form_contact span{
+
+.form_contact span {
     font-size: 18px;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     color: #4C5A5D;
 }
-.form_contact input{
+
+.form_contact input {
     height: 50px;
     border-radius: 8px;
     padding-left: 12px;
@@ -459,40 +519,48 @@ ul, ol {
     font-family: 'Roboto', sans-serif;
     color: #4C5A5D;
 }
-.txt_msg{
+
+.txt_msg {
     display: flex;
     flex-direction: column;
     gap: 8px;
     height: 100px;
 }
-.txt_msg input{
+
+.txt_msg input {
     height: 200px;
 }
-.type_msg{
+
+.type_msg {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
-.checkbox{
+
+.checkbox {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
-.input{
+
+.input {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
-.input input{
+
+.input input {
     height: 35px;
     width: 35px;
 }
-.container_button{
+
+.container_button {
     display: flex;
     justify-content: center;
 }
-.submit_form_contact{
+
+.submit_form_contact {
     margin-top: 38px;
     height: 60px;
     width: 200px;
@@ -503,6 +571,7 @@ ul, ol {
     border: solid #E7A200;
     color: #4C5A5D;
 }
+
 .submit_form_contact:hover {
     background-color: #d03012;
     color: white;
@@ -513,7 +582,7 @@ ul, ol {
 
 
 /****** FOOTER ******/
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     background-color: #E7A200;
@@ -523,7 +592,8 @@ footer{
     color: white;
     padding: 30px;
 }
-.developers{
+
+.developers {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -532,15 +602,18 @@ footer{
     gap: 12px;
     margin-left: 150px;
 }
-.bold{
+
+.bold {
     font-size: 20px;
     font-weight: 800;
 }
-.developers p{
+
+.developers p {
     font-size: 18px;
     font-weight: 300;
 }
-.social{
+
+.social {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -548,21 +621,25 @@ footer{
     width: 300px;
     margin-right: 150px;
 }
-.address{
+
+.address {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.address p{
+
+.address p {
     font-size: 18px;
     font-weight: 300;
 }
-.contact{
+
+.contact {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.contact p{
+
+.contact p {
     font-size: 18px;
     font-weight: 300;
 }

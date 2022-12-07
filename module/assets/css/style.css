@@ -14,8 +14,7 @@ a {
     color: white;
 }
 
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
@@ -50,6 +49,61 @@ ol {
 
 
 
+@media (max-width: 768px) {
+   
+}
+
+
+
+/****** MENU-BURGUER ******/
+#menu-burguer-conteiner{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+.menu-burguer, .menu-burguer::before, .menu-burguer::after{
+    display: block;
+    content: "";
+    height: 4px;
+    width: 36px;
+    background-color: white; 
+    position: absolute;
+    transition: all 0.5s;
+}
+.menu-burguer::before{
+    transform: translateY(-12px);
+}
+.menu-burguer::after{
+    transform: translateY(12px);
+}
+#menu-burguer-conteiner.show .menu-burguer{
+    background-color: transparent;
+}
+#menu-burguer-conteiner.show .menu-burguer::before{
+    transform: rotate(45deg);
+}
+#menu-burguer-conteiner.show .menu-burguer::after{
+    transform: rotate(-45deg);
+}
+@media (max-width:768px) {
+    header{
+        display: flex;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
+    #menu-burguer-conteiner{
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+    }
+}
+
+
+
 /****** HEADER ******/
 .navigation {
     display: flex;
@@ -65,6 +119,29 @@ ol {
     justify-content: flex-end;
 }
 
+
+@media (max-width: 768px) {
+    .navigation{
+        background-color: #000;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 65px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        transform: translate(100%);
+        transition: all 1s;
+    }
+    #menu-burguer-conteiner.show ~ .navigation{
+        transform: translate(0);
+    }
+}
 
 
 /****** MAIN ******/
@@ -117,6 +194,35 @@ ol {
 
 
 
+@media (max-width:768px) {
+    .apresentation{
+        padding: 16px;
+    }
+
+    .text{
+        width: fit-content;
+        height: 300px;
+        margin-right: 0%;
+        background-color: #4c5a5d92;
+        border-radius: 12px;
+        padding: 12px;
+    }
+    .title_main {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    
+    .sub_title {
+        font-size: 14px;
+    }
+    
+    .title {
+        font-size: 32px;
+    }
+}
+
+
+
 /****** MAIN-SECTION-PROMOCOES ******/
 .promotion {
     display: flex;
@@ -137,6 +243,7 @@ ol {
     gap: 48px;
 }
 
+/****** CARD-PROMO ******/
 .card_promo {
     display: flex;
     justify-content: space-between;
@@ -174,6 +281,53 @@ ol {
     font-size: 38px;
     font-weight: 800;
 }
+/************************/
+
+
+
+@media (max-width:768px) {
+    .promotion{
+        margin-top: 26px;
+    }
+
+    .promocoes {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        padding: 12px;
+        gap: 28px;
+    }
+    
+    /****** CARD-PROMO ******/
+    .card_promo {
+        height: 320px;
+        width: 290px;
+        border-radius: 18px;
+        padding: 18px;
+    }
+    
+    .card_promo img {
+        height: fit-content;
+        border-radius: 10px;
+    }
+    
+    .txt_card {
+        gap: 5px;
+        margin-top: 5px;
+    }
+    
+    .txt_card h1{ 
+        font-size: 22px;
+    }
+
+    span.description{
+        font-size: 16px;
+    }
+    
+    span.price{
+        font-size: 28px;
+    }
+    /*************************/
+}
 
 
 
@@ -196,6 +350,7 @@ ol {
     gap: 48px;
 }
 
+/****** CARD-FAVORITOS ******/
 .card_favoritos {
     display: flex;
     justify-content: space-between;
@@ -231,6 +386,49 @@ ol {
     font-family: 'Roboto', sans-serif;
     font-size: 38px;
     font-weight: 800;
+}
+/****************************/
+
+
+
+@media (max-width:768px) {
+    .favoritos {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        padding: 12px;
+        gap: 28px;
+    }
+
+    /****** CARD-FAVORITOS ******/
+    .card_favoritos {
+        height: 320px;
+        width: 290px;
+        border-radius: 18px;
+        padding: 18px;
+    }
+    
+    .card_favoritos img {
+        height: fit-content;
+        border-radius: 10px;
+    }
+    
+    .txt_card {
+        gap: 5px;
+        margin-top: 5px;
+    }
+    
+    .txt_card h1{ 
+        font-size: 22px;
+    }
+
+    span.description{
+        font-size: 16px;
+    }
+    
+    span.price{
+        font-size: 28px;
+    }
+    /****************************/
 }
 
 
@@ -287,8 +485,7 @@ ol {
     width: 50%;
 }
 
-
-/****** CARD-PIZZA ******/
+/****** CARD-PRODUTOS ******/
 .card_produtos {
     display: flex;
     align-items: center;
@@ -320,7 +517,7 @@ ol {
     font-size: 22px;
     font-weight: 400;
 }
-/************/
+/****************************/
 
 .outras {
     display: flex;
@@ -393,40 +590,149 @@ ol {
     width: 100%;
 }
 
+/****** CARD-PRODUTOS ******/
+    /* .card_produtos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 180px;
+        width: 700px;
+        font-family: 'Roboto', sans-serif;
+    }
 
-/****** CARD-BEBIDAS ******/
-.card_produtos {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 180px;
-    width: 700px;
-    font-family: 'Roboto', sans-serif;
+    .card_produtos i {
+        font-size: 28px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: #d03012;
+    }
+
+    .info h1 {
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+    .info span {
+        font-size: 22px;
+        font-weight: 400;
+    } */
+/****************************/
+
+
+
+@media (max-width:768px) {
+    .container_pizzas {
+        margin-top: 26px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        font-size: 24px;
+    }
+    
+    .container_pizzas img {
+        height: 300px;
+        width: 390px;
+    }
+    
+    .salgadas {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .column1 {
+        width: 100%;
+    }
+    
+    .column2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    /****** CARD-PRODUTOS ******/
+    .card_produtos {
+        height: 150px;
+        width: 90%;
+    }
+
+    .card_produtos i {
+        font-size: 20px;
+    }
+
+    .info {
+        gap: 5px;
+    }
+
+    .info h1 {
+        font-size: 22px;
+    }
+
+    .info span {
+        font-size: 16px;
+    }
+    /****************************/
+
+    .outras {
+        flex-direction: column;
+        padding-top: 26px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .organicas {
+        justify-content: center;
+        width: 100%;
+        padding-top: 26px;
+    }
+    
+    .organicas img {
+        height: 200px;
+        width: 390px;
+        margin-bottom: 30px;
+    }
+    
+    .doces {
+        justify-content: center;
+        width: 100%;
+        padding-top: 38px;
+    }
+    
+    .doces img {
+        height: 200px;
+        width: 350px;
+        margin-bottom: 30px;
+    }
+    
+    .bebidas {
+        margin-bottom: 26px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        font-size: 24px;
+    }
+    
+    .bebidas img {
+        height: 240px;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+    
+    .container_bebidas {
+        flex-direction: column;
+        margin-top: 26px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
 }
 
-.card_produtos i {
-    font-size: 28px;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: #d03012;
-}
-
-.info h1 {
-    font-size: 32px;
-    font-weight: 800;
-}
-
-.info span {
-    font-size: 22px;
-    font-weight: 400;
-}
-/************/
 
 
 /****** MAIN-SECTION-SERVICOS ******/
@@ -475,6 +781,40 @@ ol {
     font-size: 28px;
     font-weight: 300;
     color: #4C5A5D;
+}
+
+
+
+@media (max-width:768px) {
+    .container_services {
+        height: fit-content;
+        padding: 36px;
+        margin-top: 26px;
+        margin-bottom: 26px;
+    }
+    .container_info {
+        gap: 30px;
+    }
+    
+    .img_info img {
+        width: 100px;
+        height: 100px;
+    }
+    .txt_info {
+        gap: 5px;
+    }
+    .txt_info span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .num {
+        font-size: 18px;
+        gap: 5px;
+    }
+    .png_services{
+        display: none;
+    }
 }
 
 
@@ -581,6 +921,14 @@ ol {
 
 
 
+@media (max-width:768px) {
+    .contact_user{
+        display: none;
+    }
+}
+
+
+
 /****** FOOTER ******/
 footer {
     display: flex;
@@ -642,4 +990,54 @@ footer {
 .contact p {
     font-size: 18px;
     font-weight: 300;
+}
+
+
+@media (max-width:768px) {    
+    footer {
+        justify-content: flex-start;
+        height: 190px;
+        gap: 12px;
+    }
+
+    .developers {
+        margin-left: 0px;
+    }
+
+    .developers img{
+        height: 120px;
+    }
+    
+    .bold {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .developers p {
+        font-size: 14px;
+    }
+    
+    .social {
+        gap: 6px;
+        width: fit-content;
+        margin-right: 0px;
+    }
+    
+    .address {
+        gap: 3px;
+    }
+    
+    .address p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .contact {
+        gap: 3px;
+    }
+    
+    .contact p {
+        font-size: 14px;
+        font-weight: 300;
+    }
 }

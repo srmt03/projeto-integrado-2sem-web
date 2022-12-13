@@ -1,4 +1,4 @@
-class card extends HTMLElement{
+class CardProdutos extends HTMLElement{
     constructor(){
         super();
         this.shadow = this.attachShadow({mode:'open'});
@@ -101,4 +101,4 @@ class card extends HTMLElement{
         return card;
     }
 }
-customElements.define('card_produtos', card)
+customElements.define("card-produtos", CardProdutos)

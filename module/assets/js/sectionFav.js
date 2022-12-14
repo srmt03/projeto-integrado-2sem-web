@@ -14,7 +14,7 @@ console.log(pizza);
 
 pizza.forEach(element => {
     const container = document.querySelector('.favoritos')
-    const card = document.createElement('.card_favoritos')
+    const card = document.createElement('.card-favoritos')
 
     card.setAttribute('imagem', element.imagem)
     card.setAttribute('nome', element.nome)
@@ -36,7 +36,7 @@ console.log(pizzaDoce);
 
 pizzaDoce.forEach(element => {
     const container = document.querySelector('.favoritos');
-    const card = document.createElement('.card_favoritos');
+    const card = document.createElement('.card-favoritos');
 
     card.setAttribute('imagem', element.imagem)
     card.setAttribute('nome', element.nome)
@@ -58,7 +58,7 @@ console.log(pizzaOrganica);
 
 pizzaOrganica.forEach(element => {
     const container = document.querySelector('.favoritos');
-    const card = document.createElement('.card_favoritos');
+    const card = document.createElement('.card-favoritos');
 
     card.setAttribute('imagem', element.imagem)
     card.setAttribute('nome', element.nome)
@@ -80,7 +80,7 @@ console.log(bebida);
 
 bebida.forEach(element => {
     const container = document.querySelector('.favoritos')
-    const card = document.createElement('.card_favoritos')
+    const card = document.createElement('.card-favoritos')
 
     card.setAttribute('imagem', element.imagem)
     card.setAttribute('nome', element.nome)

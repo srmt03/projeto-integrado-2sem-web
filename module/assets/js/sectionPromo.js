@@ -1,91 +1,26 @@
 'use strict'
 
-import './card_promo.js'
+import "./card_promo.js"
 
-const fetchPizza = async function () {
-    const url = ``
+const fetchPizzaPromocao = async function () {
+    const url = `https://api-pizzaria.netlify.app/.netlify/functions/api/v1/promocao/pizzas`
     const response =  await fetch(url);
     const data = await response.json();
     return data
 }
 
-const pizza = await fetchPizza();
-console.log(pizza);
+const { pizzas } = await fetchPizzaPromocao();
 
-pizza.forEach(element => {
+pizzas.forEach(element => {
     const container = document.querySelector('.promocoes')
-    const card = document.createElement('.card_promo')
+    const card = document.createElement('card-promo')
 
     card.setAttribute('imagem', element.imagem)
     card.setAttribute('nome', element.nome)
     card.setAttribute('descricao', element.descricao)
-    card.setAttribute('preco', element.preco)
+    card.setAttribute('preco_final', element.preco_final)
     
     container.appendChild(card)
 });
 
-const fetchPizzaDoce = async function () {
-    const url = ``;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data
-}
-const pizzaDoce = await fetchPizzaDoce();
-console.log(pizzaDoce);
-
-pizzaDoce.forEach(element => {
-    const container = document.querySelector('.promocoes');
-    const card = document.createElement('.card_promo');
-
-    card.setAttribute('imagem', element.imagem)
-    card.setAttribute('nome', element.nome)
-    card.setAttribute('descricao', element.descricao)
-    card.setAttribute('preco', element.preco)
-
-    container.appendChild(card);
-});
-
-const fetchPizzaOrganica = async function () {
-    const url = ``;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data
-}
-
-const pizzaOrganica = await fetchPizzaOrganica();
-console.log(pizzaOrganica);
-
-pizzaOrganica.forEach(element => {
-    const container = document.querySelector('.promocoes');
-    const card = document.createElement('.card_promo');
-
-    card.setAttribute('imagem', element.imagem)
-    card.setAttribute('nome', element.nome)
-    card.setAttribute('descricao', element.descricao)
-    card.setAttribute('preco', element.preco)
-
-    container.appendChild(card);
-});
-
-const fetchBebida = async function () {
-    const url = ``
-    const response =  await fetch(url);
-    const data = await response.json();
-    return data
-}
-
-const bebida = await fetchBebida();
-console.log(bebida);
-
-bebida.forEach(element => {
-    const container = document.querySelector('.promocoes')
-    const card = document.createElement('.card_promo')
-
-    card.setAttribute('imagem', element.imagem)
-    card.setAttribute('nome', element.nome)
-    card.setAttribute('descricao', element.descricao)
-    card.setAttribute('preco', element.preco)
-    
-    container.appendChild(card)
-});
 

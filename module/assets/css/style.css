@@ -236,43 +236,41 @@ ul, ol {
 }
 
 /****** CARD-PROMO ******/
-.card_promo {
+/* .card_promo{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     background-color: #E7A200;
     height: 420px;
-    width: 410px;
+    width: 360px;
     border-radius: 20px;
     padding: 25px;
 }
-
-.card_promo:hover .number_card {
+.card_promo:hover .number_card{
     color: #d03012;
     transition: 0.5s;
 }
-
-.card_promo img {
+.card_promo img{
     height: 220px;
     border-radius: 12px;
 }
-
-.txt_card {
+.txt_card{
     color: white;
     font-family: 'Roboto', sans-serif;
-    gap: 5px;
     font-size: 20px;
-    margin-top: 5px;
+    gap: 5px;
 }
-
-.number_card {
+.txt_card h1 {
+    margin:0;
+}
+.number_card{
     display: flex;
     justify-content: flex-end;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 38px;
     font-weight: 800;
-}
+} */
 /************************/
 
 
@@ -290,7 +288,7 @@ ul, ol {
     }
     
     /****** CARD-PROMO ******/
-    .card_promo {
+    /* .card_promo {
         height: 320px;
         width: 290px;
         border-radius: 18px;
@@ -317,7 +315,7 @@ ul, ol {
     
     span.price{
         font-size: 28px;
-    }
+    } */
     /*************************/
 }
 
@@ -349,7 +347,7 @@ ul, ol {
     flex-direction: column;
     background-color: #E7A200;
     height: 420px;
-    width: 410px;
+    width: 360px;
     border-radius: 20px;
     padding: 25px;
 }
@@ -367,10 +365,12 @@ ul, ol {
 .txt_card {
     color: white;
     font-family: 'Roboto', sans-serif;
-    gap: 5px;
     font-size: 20px;
+    gap: 5px;
 }
-
+.txt_card h1 {
+    margin:0;
+}
 .number_card {
     display: flex;
     justify-content: flex-end;
@@ -478,7 +478,7 @@ ul, ol {
 }
 
 /****** CARD-PRODUTOS ******/
-.card_produtos {
+/* .card_produtos {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -508,7 +508,7 @@ ul, ol {
 .info span {
     font-size: 22px;
     font-weight: 400;
-}
+} */
 /****************************/
 
 .outras {
@@ -582,41 +582,6 @@ ul, ol {
     width: 100%;
 }
 
-/****** CARD-PRODUTOS ******/
-    /* .card_produtos {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 180px;
-        width: 700px;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .card_produtos i {
-        font-size: 28px;
-    }
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        color: #d03012;
-    }
-
-    .info h1 {
-        font-size: 32px;
-        font-weight: 800;
-    }
-
-    .info span {
-        font-size: 22px;
-        font-weight: 400;
-    } */
-/****************************/
-
-
 
 @media (max-width:768px) {
     .container_pizzas {
@@ -650,7 +615,7 @@ ul, ol {
     }
 
     /****** CARD-PRODUTOS ******/
-    .card_produtos {
+    /* .card_produtos {
         height: 150px;
         width: 90%;
     }
@@ -669,7 +634,7 @@ ul, ol {
 
     .info span {
         font-size: 16px;
-    }
+    } */
     /****************************/
 
     .outras {

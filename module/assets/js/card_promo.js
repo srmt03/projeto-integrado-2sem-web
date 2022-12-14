@@ -1,16 +1,15 @@
-class card extends HTMLElement{
+class CardPromo extends HTMLElement{
     constructor(){
         super();
         this.shadow = this.attachShadow({mode:'open'});
         this.bgcolor = '#E7A200'
-        this.image = 'Sem Imagem'
+        this.imagem = ''
         this.nome = 'Nome do Produto'
         this.descricao = ''
-        this.preco = ''
-        this.id = ''
+        this.preco_final = ''
     }
     static get observedAttributes(){
-        return ['bgcolor', 'image', 'nome','descricao', 'preco', 'id']
+        return ['bgcolor', 'imagem', 'nome','descricao', 'preco_final']
     }
 
     attributeChangedCallback(nameAttr, oldValue, newValue){
@@ -18,16 +17,14 @@ class card extends HTMLElement{
 
         if (nameAttr === 'bgcolor') {
             this.bgcolor = newValue
-        } else if (nameAttr === 'image') {
-            this.image = newValue
+        } else if (nameAttr === 'imagem') {
+            this.imagem = newValue
         } else if (nameAttr === 'nome') {
             this.nome = newValue
         } else if (nameAttr === 'descricao') {
             this.descricao = newValue
-        } else if (nameAttr === 'preco') {
-            this.preco = newValue
-        } else if (nameAttr === 'id') {
-            this.id = newValue
+        } else if (nameAttr === 'preco_final') {
+            this.preco_final = newValue
         }
     }
 
@@ -46,7 +43,7 @@ class card extends HTMLElement{
                 flex-direction: column;
                 background-color: #E7A200;
                 height: 420px;
-                width: 410px;
+                width: 360px;
                 border-radius: 20px;
                 padding: 25px;
             }
@@ -61,9 +58,11 @@ class card extends HTMLElement{
             .txt_card{
                 color: white;
                 font-family: 'Roboto', sans-serif;
-                gap: 5px;
                 font-size: 20px;
-                margin-top: 5px;
+                gap: 5px;
+            }
+            .txt_card h1 {
+                margin:0;
             }
             .number_card{
                 display: flex;
@@ -72,6 +71,37 @@ class card extends HTMLElement{
                 font-family: 'Roboto', sans-serif;
                 font-size: 38px;
                 font-weight: 800;
+            }
+
+            @media (max-width:768px) {
+                .card_promo {
+                    height: 420px;
+                    width: 290px;
+                    border-radius: 18px;
+                    padding: 18px;
+                }
+                
+                .card_promo img {
+                    height: fit-content;
+                    border-radius: 10px;
+                }
+                
+                .txt_card {
+                    gap: 5px;
+                    margin-top: 5px;
+                }
+                
+                .txt_card h1{ 
+                    font-size: 22px;
+                }
+            
+                span.description{
+                    font-size: 16px;
+                }
+                
+                span.price{
+                    font-size: 28px;
+                }
             }
         `
         return style;
@@ -82,17 +112,17 @@ class card extends HTMLElement{
         card.classList.add('card_promo');
         card.innerHTML = 
         `
-        <img src="${this.image}" alt="">
+        <img src="${this.imagem}" alt="">
         <div class="txt_card">
             <h1 class="name">${this.nome}</h1>
             <span class="description">${this.descricao}</span>
         </div>
         <div class="number_card">
-            <span class="price">${this.preco}</span>
+            <span class="price">R$${this.preco_final}</span>
         </div>
 
         `
         return card;
     }
 }
-customElements.define('card_promo', card)
+customElements.define('card-promo', CardPromo)

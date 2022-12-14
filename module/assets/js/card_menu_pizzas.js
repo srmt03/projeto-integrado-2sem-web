@@ -5,11 +5,9 @@ class CardProdutos extends HTMLElement{
         this.bgcolor = '#EBE7DB'
         this.nome = 'Nome do Produto'
         this.descricao = ''
-        this.id = ''
-        this.divColumn = 1;
     }
     static get observedAttributes(){
-        return ['bgcolor', 'nome', 'descricao', 'id', 'divColumn']
+        return ['bgcolor', 'nome', 'descricao']
     }
 
     attributeChangedCallback(nameAttr, oldValue, newValue){
@@ -21,10 +19,6 @@ class CardProdutos extends HTMLElement{
             this.nome = newValue
         } else if (nameAttr === 'descricao') {
             this.descricao = newValue
-        } else if (nameAttr === 'id') {
-            this.id = newValue
-        } else if(nameAttr === 'divColumn') {
-            this.divColumn = newValue
         }
     }
 
@@ -37,15 +31,15 @@ class CardProdutos extends HTMLElement{
         const style = document.createElement('style');
         style.textContent = 
         `
-            .card_produtos{
+            .card_produtos_pizzas {
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: center;
                 height: 180px;
                 width: 700px;
                 font-family: 'Roboto', sans-serif;
             }
-            .card_produtos i{
+            .card_produtos_pizzas i{
                 font-size: 28px;
             }
             .info{
@@ -63,6 +57,31 @@ class CardProdutos extends HTMLElement{
             .info span{
                 font-size: 22px;
                 font-weight: 400;
+                text-align: center;
+            }
+
+            @media (max-width:768px) {
+                .card_produtos_pizzas {
+                    height: 150px;
+                    width: 90%;
+                }
+            
+                .card_produtos_pizzas i {
+                    font-size: 20px;
+                }
+            
+                .info {
+                    gap: 5px;
+                }
+            
+                .info h1 {
+                    font-size: 22px;
+                }
+            
+                .info span {
+                    font-size: 16px;
+                    text-align: center;
+                }
             }
         `
         return style;
@@ -70,35 +89,17 @@ class CardProdutos extends HTMLElement{
 
     component(){
         const card = document.createElement('div');
-        card.classList.add('card_produtos');
-
-        if(this.divColumn === 1) {
-
-            card.innerHTML = 
-            `
-            <div class="card_produtos">
-                <i class="far fa-star"></i>
-                <div class="info">
-                    <h1 class="nome">${this.nome}</h1>
-                    <span class="desc">${this.descricao}</span>
-                </div>
+        card.classList.add('card_produtos_pizzas');
+        card.innerHTML = 
+        `
+        <div class="card_produtos_pizzas">
+            <div class="info">
+                <h1 class="nome">${this.nome}</h1>
+                <span class="desc">${this.descricao}</span>
             </div>
-    
-            `
-        } else { 
-            card.innerHTML = 
-            `
-            <div class="card_produtos">
-                <div class="info">
-                    <h1 class="nome">${this.nome}</h1>
-                    <span class="desc">${this.descricao}</span>
-                </div>
-                <i class="far fa-star"></i>
-            </div>
-
-            `
-        }
+        </div>
+        `
         return card;
     }
 }
-customElements.define("card-produtos", CardProdutos)
+customElements.define("card-produtos-pizzas", CardProdutos)
